@@ -6,8 +6,11 @@ function App() {
 
   return (
     <div>
-      <h1>Drag & Drop Fields</h1>
-    </div>
+    <h1>Drag & Drop Fields</h1>
+    {inputs.map((input, index) => (
+      <input key={index} type="text" value={input} />
+    ))}
+  </div>
   );
 }
 
