@@ -14,8 +14,14 @@ function App() {
     <div>
     <h1>Drag & Drop Fields</h1>
     {inputs.map((input, index) => (
-      <input key={index} type="text" value={input} />
+      <input
+        key={index}
+        type="text"
+        value={input}
+        onChange={(e) => handleInputChange(index, e.target.value)}
+      />
     ))}
+    <button onClick={() => setInputs(["", "", "", "", "", "", ""])}>Clear</button>
   </div>
   );
 }
