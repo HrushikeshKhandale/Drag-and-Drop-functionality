@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
   const [inputs, setInputs] = useState(["", "", "", "", "", "", ""]);
@@ -10,6 +10,7 @@ function App() {
     if (storedInputs && storedInputs.length === inputs.length) {
       setInputs(storedInputs);
     }
+    //eslint-disable-next-line
   }, []);
 
   const handleInputChange = (index, value) => {
@@ -72,7 +73,22 @@ function App() {
         </div>
       </div>
 
-      <button onClick={handleClear}>Clear</button>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+        <button
+          style={{
+            padding: "7px 15px",
+            backgroundColor: "#007bff",
+            color: "#fff",
+            border: "none",
+            cursor: "pointer",
+            borderRadius:'5px',
+            boxShadow:'inset -5px 5px 10px blue'
+          }}
+          onClick={handleClear}
+        >
+          Clear
+        </button>
+      </div>
     </>
   );
 }
