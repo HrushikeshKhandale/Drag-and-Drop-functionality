@@ -25,7 +25,7 @@ function App() {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       <h1>Drag & Drop Fields</h1>
       {inputs.map((input, index) => (
         <input
